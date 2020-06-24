@@ -14,7 +14,7 @@ describe('helloWorld', function() {
     });
 });
 
-//exercise #1
+//function sayHello()
 describe("sayHello",function(){
     it("should be a defined function", function(){
         expect(typeof sayHello).toBe("function");
@@ -22,22 +22,48 @@ describe("sayHello",function(){
     it("should return a string when called", function(){
         expect(typeof sayHello()).toBe("string");
     });
-    it("should return 'Hello, Jane!'", function(){
+    it("should return 'Hello, Jane!'when called", function(){
         expect(sayHello("Jane")).toBe("Hello, Jane!");
     });
-    it("should return 'Hello, Alex!'", function(){
+    it("should return 'Hello, Alex!'when called", function(){
         expect(sayHello("Alex")).toBe("Hello, Alex!");
     });
-    it("should return 'Hello, Pat!'", function(){
+    it("should return 'Hello, Pat!'when called", function(){
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
-    it("(),should return 'Hello, World!'", function(){
+    it("(),should return 'Hello, World!'when called", function(){
         expect(sayHello()).toBe("Hello, World!");
     });
-    it("(true)should return 'Hello, World!'", function(){
+    it("(true)should return 'Hello, World!'when called", function(){
         expect(sayHello(true)).toBe("Hello, World!");
     });
-    it("(false)should return 'Hello, World!'", function(){
+    it("(false)should return 'Hello, World!'when called", function(){
         expect(sayHello(false)).toBe("Hello, World!");
     });
+});
+
+//isFive
+describe("isFive",function(){
+    it("should be a defined function", function(){
+        expect(typeof isFive).toBe("function");
+    });
+    it("should return a boolean when called", function(){
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it("(5)should return true when called", function() {
+        expect(isFive(5)).toBe(true);
+    });
+    it("('5')should return true when called", function() {
+        expect(isFive("5")).toBe(true);
+    });
+    it("('-5')should return true when called", function() {
+        expect(isFive("-5")).toBe(false);
+    });
+    it("('ni')should return true when called", function() {
+        expect(isFive("ni")).toBe(false);
+    });
+    it("(0)should return true when called", function() {
+        expect(isFive(0)).toBe(false);
+    });
+
 });

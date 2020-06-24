@@ -13,3 +13,10 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
+
+//exercise #1
+describe("helloWorld",function(){
+    it("should be a defined function", function(){
+        expect(typeof sayHello).toBe("function");
+    })
+})
